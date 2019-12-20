@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+int min = 10000;
+const int n = 5;
+int mas[n]={7,3,10,6,1};
+    for (int gr = 0 ; gr < n - 1 ; gr++)
+    {
+        for (int nte = gr+1; nte < n ; nte++)
+        {
+            if (mas[gr] > mas[nte])
+            {
+                min = mas[nte];
+                mas[nte] = mas[gr];
+                mas[gr] = min;
+            }
+        }
+    }
+    for (int gr = 0;gr < n;gr++)
+    {
+    printf("%d ", mas[gr]);
+    }
+}
+
